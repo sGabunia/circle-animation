@@ -4,19 +4,19 @@ import { Button } from "./components/Button";
 import { Circle } from "./components/Circle";
 
 export default function App() {
-  const scaleValue = React.useRef(new Animated.Value(0)).current;
+  const scaleValue = React.useRef(new Animated.Value(1)).current;
   const opacityValue = React.useRef(new Animated.Value(1)).current;
 
   const scaleUp = () => {
     Animated.spring(scaleValue, {
-      toValue: 1,
+      toValue: 2,
       useNativeDriver: true,
     }).start();
   };
 
   const scaleDown = () => {
     Animated.spring(scaleValue, {
-      toValue: 0,
+      toValue: 0.5,
       useNativeDriver: true,
     }).start();
   };

@@ -8,10 +8,7 @@ export const Circle = ({ scaleValue, opacityValue }) => {
         ...styles.circle,
         transform: [
           {
-            scale: scaleValue.interpolate({
-              inputRange: [0, 1],
-              outputRange: [1, 2],
-            }),
+            scale: scaleValue,
           },
         ],
         opacity: opacityValue,
